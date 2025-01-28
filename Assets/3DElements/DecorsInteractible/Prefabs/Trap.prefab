@@ -123,10 +123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player
   detectionRange: 15
-  openDelay: 2
-  closeDelay: 1
+  openDelay: 1.5
+  closeDelay: 0.5
   rotationAngle: -75
   rotationDuration: 0.5
+  windowTrap: {fileID: 385649890339123436}
 --- !u!1 &385649890339123436
 GameObject:
   m_ObjectHideFlags: 0

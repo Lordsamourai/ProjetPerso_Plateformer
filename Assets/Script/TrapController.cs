@@ -16,13 +16,26 @@ public class TrapController : MonoBehaviour
     private Quaternion openRotation; // Rotation lorsqu'elle est ouverte
     private bool isTriggered = false; // Empêche plusieurs activations simultanées
 
+    public GameObject windowTrap;
+
+    private Material alertMaterial; // Nouveau matériau à appliquer
+    private Material originalMaterial; // Sauvegarde du matériau d'origine
+
+    private Renderer windowTrapRenderer;
+
     private void Start()
     {
+        windowTrapRenderer = windowTrap.GetComponent<Renderer>(); 
+
+        alertMaterial = new Material(Shader.Find("Standard"));
+        alertMaterial.color = Color.red;
+
         GameObject playerObject = GameObject.Find(playerName);
         if (playerObject != null)
         {
             player = playerObject.transform;
         }
+
         // Sauvegarde la rotation initiale
         initialRotation = transform.rotation;
 
@@ -42,6 +55,11 @@ public class TrapController : MonoBehaviour
 
     private IEnumerator HandleTrap()
     {
+        Material[] mats = windowTrapRenderer.materials;
+        originalMaterial = mats[1];
+        mats[1] = alertMaterial;
+        windowTrapRenderer.materials = mats;
+
         // Attends avant d'ouvrir
         yield return new WaitForSeconds(openDelay);
         StartCoroutine(RotateTrap(transform.rotation, openRotation, rotationDuration));
@@ -50,8 +68,13 @@ public class TrapController : MonoBehaviour
         yield return new WaitForSeconds(closeDelay + rotationDuration); // Inclut le temps de l'ouverture
         StartCoroutine(RotateTrap(transform.rotation, initialRotation, rotationDuration));
 
+        // Réinitialise le matériau après la fermeture
+        yield return new WaitForSeconds(rotationDuration);
+
+        mats[1] = originalMaterial; 
+        windowTrapRenderer.materials = mats;
+
         // Réinitialise pour permettre de retrigger
-        yield return new WaitForSeconds(rotationDuration); // Attend la fin de la fermeture
         isTriggered = false;
     }
 
