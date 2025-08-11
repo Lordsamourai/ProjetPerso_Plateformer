@@ -1,0 +1,66 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "entries": [
+        { "key": "play", "value": "Play" },
+        { "key": "options", "value": "Options" },
+        { "key": "credits", "value": "Credits" },
+        { "key": "exit", "value": "Exit" },
+        { "key": "general", "value": "General" },
+        { "key": "control", "value": "Control" },
+        { "key": "screen", "value": "Screen" },
+        { "key": "settings", "value": "Settings" },
+        { "key": "display mode", "value": "Display Mode" },
+        { "key": "resolution", "value": "Resolution" },
+        { "key": "interface", "value": "Interface" },
+        { "key": "lighting", "value": "Lighting" },
+        { "key": "language", "value": "Language" },
+        { "key": "audio", "value": "Audio" },
+        { "key": "volume", "value": "Volume" },
+        { "key": "keyboard", "value": "Keyboard" },
+        { "key": "type", "value": "Type" },
+        { "key": "movement", "value": "Movement" },
+        { "key": "forward", "value": "Forward" },
+        { "key": "backward", "value": "Backward" },
+        { "key": "go left", "value": "Go Left" },
+        { "key": "go right", "value": "Go Right" },
+        { "key": "jump", "value": "Jump" },
+        { "key": "command", "value": "Command" },
+        { "key": "escape", "value": "Escape" },
+        { "key": "interact", "value": "Interact" }
+      ]
+    },
+    {
+      "code": "fr",
+      "entries": [
+        { "key": "play", "value": "Jouer" },
+        { "key": "options", "value": "Options" },
+        { "key": "credits", "value": "Bienvenue" },
+        { "key": "exit", "value": "Quitter" },
+        { "key": "general", "value": "Général" },
+        { "key": "control", "value": "Contrôle" },
+        { "key": "screen", "value": "Écran" },
+        { "key": "settings", "value": "Paramètres" },
+        { "key": "display mode", "value": "Mode d'affichage" },
+        { "key": "resolution", "value": "Résolution" },
+        { "key": "interface", "value": "Interface" },
+        { "key": "lighting", "value": "Éclairage" },
+        { "key": "language", "value": "Langue" },
+        { "key": "audio", "value": "Audio" },
+        { "key": "volume", "value": "Volume" },
+        { "key": "keyboard", "value": "Clavier" },
+        { "key": "type", "value": "Type" },
+        { "key": "movement", "value": "Déplacement" },
+        { "key": "forward", "value": "Avancer" },
+        { "key": "backward", "value": "Reculer" },
+        { "key": "go left", "value": "Aller à gauche" },
+        { "key": "go right", "value": "Aller à droite" },
+        { "key": "jump", "value": "Sauter" },
+        { "key": "command", "value": "Commande" },
+        { "key": "escape", "value": "Échap" },
+        { "key": "interact", "value": "Interagir" }
+      ]
+    }
+  ]
+}

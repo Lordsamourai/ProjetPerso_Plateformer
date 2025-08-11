@@ -1,0 +1,22 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "entries": [
+        { "key": "play", "value": "Play" },
+        { "key": "options", "value": "Options" },
+        { "key": "welcome", "value": "Welcome to the game!" },
+        { "key": "exit", "value": "Exit" }
+      ]
+    },
+    {
+      "code": "fr",
+      "entries": [
+        { "key": "play", "value": "Jouer" },
+        { "key": "options", "value": "Options" },
+        { "key": "welcome", "value": "Bienvenue" },
+        { "key": "exit", "value": "Quitter" }
+      ]
+    }
+  ]
+}
