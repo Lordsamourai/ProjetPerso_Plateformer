@@ -15,6 +15,7 @@ public class ControlsSettingsManager : MonoBehaviour
     private KeyCode backwardKey;
     private KeyCode leftKey;
     private KeyCode rightKey;
+    private KeyCode echapKey;
 
     private bool isQwertyLayout;
 
@@ -53,6 +54,7 @@ public class ControlsSettingsManager : MonoBehaviour
         backwardKey = KeyCode.S;
         rightKey = KeyCode.D;
         jumpKey = KeyCode.Space;
+        echapKey = KeyCode.Escape;
 
         UpdateButtonTexts();
     }
@@ -83,4 +85,5 @@ public class ControlsSettingsManager : MonoBehaviour
     public KeyCode GetBackwardKey() => backwardKey;
     public KeyCode GetLeftKey() => leftKey;
     public KeyCode GetRightKey() => rightKey;
+    public KeyCode GetEchap() => echapKey;
 }

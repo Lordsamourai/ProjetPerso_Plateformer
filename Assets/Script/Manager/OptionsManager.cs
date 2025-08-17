@@ -88,8 +88,8 @@ public class OptionsManager : MonoBehaviour
         // UI panels
         generalPanel.SetActive(true);
         controlPanel.SetActive(false);
-        generalButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-        controlButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+        generalButton.GetComponent<Image>().color = new Color(0.3f, 0.34f, 0.38f, 1f);
+        controlButton.GetComponent<Image>().color = new Color(0.24f, 0.27f, 0.29f, 1f);
     }
 
     private void SetKeyboardLayout(int index)
@@ -133,15 +133,15 @@ public class OptionsManager : MonoBehaviour
     {
         generalPanel.SetActive(true);
         controlPanel.SetActive(false);
-        generalButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
-        controlButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+        generalButton.GetComponent<Image>().color = new Color(0.3f, 0.34f, 0.38f, 1f);
+        controlButton.GetComponent<Image>().color = new Color(0.24f, 0.27f, 0.29f, 1f);
     }
 
     public void HideGeneralPanel()
     {
         generalPanel.SetActive(false);
         controlPanel.SetActive(true);
-        generalButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
-        controlButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 1f);
+        generalButton.GetComponent<Image>().color = new Color(0.24f, 0.27f, 0.29f, 1f);
+        controlButton.GetComponent<Image>().color = new Color(0.3f, 0.34f, 0.38f, 1f);
     }
 }

@@ -24,7 +24,11 @@ public class DeplacementPersonnage : MonoBehaviour
 
     void Update()
     {
-        // Mouvement personnalisé avec touches configurables
+        // Empêche tout mouvement si le jeu est en pause
+        if (PauseManager.Instance != null && PauseManager.Instance.isPaused)
+            return;
+
+        // Mouvement personnalisé
         Vector3 move = Vector3.zero;
         if (Input.GetKey(OptionsManager.Instance.controlsManager.GetForwardKey()))
             move += transform.forward;
@@ -43,26 +47,26 @@ public class DeplacementPersonnage : MonoBehaviour
         Vector3 velocity = move.normalized * moveSpeed * Time.deltaTime;
         transform.position += velocity;
 
-        // Rotation avec la souris
+        // Rotation caméra
         float yaw = Input.GetAxis("Mouse X") * rotationSpeed;
         pitch -= Input.GetAxis("Mouse Y") * rotationSpeed;
         pitch = Mathf.Clamp(pitch, -90f, 90f);
 
         transform.Rotate(0f, yaw, 0f);
         cameraTransform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
-    }
 
+        // Ouverture du menu pause
+        if (Input.GetKeyDown(OptionsManager.Instance.controlsManager.GetEchap()))
+        {
+            if (PauseManager.Instance.isPaused)
+                PauseManager.Instance.HidePause();
+            else
+                PauseManager.Instance.ShowPause();
+        }
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //print(collision);
-        // Si le joueur touche le sol, il peut sauter à nouveau
-        /*if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Plateforme"))
-        {
-            isGrounded = true;
-            print(isGrounded);
-        }*/
         isGrounded = true;
-        //print(isGrounded);
     }
 }
